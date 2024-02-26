@@ -1,0 +1,18 @@
+
+<div class="login-box">
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="/loginOnPost" method="post" id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" id="login-button">Login</button>
+        </form>
+    </div>
+</div>
+<% if (errorMessage) { %>
+    <script>
+        alert("<%= errorMessage %>");
+    </script>
+<% } %>

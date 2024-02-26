@@ -1,0 +1,51 @@
+<div class="submit-container">
+    <h1 class="mt-5">Update Recipe</h1>
+    <p>
+        "Share your favorite recipes with us! Whether it's a cherished family tradition, a culinary experiment gone right, or a secret ingredient masterpiece, we invite you to contribute to our diverse collection of recipes. Let your creativity shine as you share your culinary creations with our community. From comforting classics to innovative twists, your recipes have the power to inspire and delight fellow food enthusiasts."</p>
+        <form action="/recipes/update/<%- recipe.id %>" method="POST" enctype="multipart/form-data" id="updateform">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name"  required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea class="form-control" id="description" name="description" rows="4" ></textarea>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" >
+            </div>
+            <div class="form-group">
+                <label for="ingredients">Ingredients:</label>
+                <p style="font-size: 12px;">Example:Ice</p>
+                <div class="ingredient-container">
+                    <textarea class="form-control mt-2 ingredient" name="ingredients" id="myIngredients" ></textarea>
+                </div>
+                <button type="button" onclick="addIngredients()" class="my-2 ingredients">+Ingredient</button>
+            </div>
+            <div class="form-group">
+                <label for="category">Select Category:</label>
+                <select class="form-control" id="category" name="category" required>
+                    <option value="Thai" <% if(recipe.category === "Thai") { %>selected<% } %>>Thai</option>
+                    <option value="American" <% if(recipe.category === "American") { %>selected<% } %>>American</option>
+                    <option value="Chinese" <% if(recipe.category === "Chinese") { %>selected<% } %>>Chinese</option>
+                    <option value="Indian" <% if(recipe.category === "Indian") { %>selected<% } %>>Indian</option>                   
+                    <option value="Spanish" <% if(recipe.category === "Spanish") { %>selected<% } %>>Spanish</option>
+                    <option value="Mexican" <% if(recipe.category === "Mexican") { %>selected<% } %>>Mexican</option>    
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="form-group mt-3">
+                <p class="image">Image:</p>
+                <input type="file" class="form-control-file" id="image" name="image" accept="public/upload/*">
+            </div>
+            <div class="update-delete">
+                <button type="submit" class="btn btn-primary mt-3">Update</button>
+            </div>
+        </form>
+        <!-- <script>
+            function addIngredients() {
+                var ingredients = document.getElementById("myIngredients").value;
+              
+            }
+        </script> -->

@@ -1,0 +1,208 @@
+body{
+    font-family: 'Rubik',sans-serif;
+    background-color: rgba(205, 204, 204, 0.988);
+}
+.logo{
+    background-color:white;
+    border-radius: 50%;
+}
+header{
+    height: 80px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.391);
+}
+.container{
+    background-color: rgb(241, 240, 238);
+}
+a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.597);
+}
+.category{
+    display: flex;
+    justify-content: space-around;
+}
+.category-img{
+   
+    text-align: center;
+    transition: 250ms all;
+}
+.category-img:hover{
+    transform:scale( 1.1);
+    opacity: 0.5;
+}
+.chocolate{
+    display: flex;
+    justify-content: space-around;
+}
+.categories{
+display: grid;
+grid-template-columns: repeat(5,1fr);
+}
+
+.explore-recipes{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin-bottom: 50px;
+}
+.explore-recipes li{
+    list-style:lower-roman;
+}
+
+.chocolate-search{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.submit-container{
+    width: 70%;
+margin: auto;
+}
+.mt-5{
+    text-align: center;
+}
+
+
+.ingredients{
+    border-radius: 5px;
+    border: 1px solid blue;
+    color: blue;
+}
+.form-control-file{
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    
+}
+.update-delete-in-description{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.update-delete{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+.signup-box {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]
+ {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#signup-button {
+    background-color: #4caf50;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#signup-button:hover {
+    background-color: #45a049;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40%;
+}
+.login-box {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#login-button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+#login-button:hover {
+    background-color: #45a049;
+}

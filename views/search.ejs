@@ -1,0 +1,19 @@
+<h1><%- title %></h1>
+
+<section class="latest-recipes">
+    <div class="d-flex mb-2 align-items-center">
+     <a href="/explore-latest " class="ms-auto">View More</a>
+    </div>
+    <div class="chocolate-search">   
+     <% if(recipe!==""){ %>
+         <% recipe.forEach(function(recipe,index){ %>
+      <a  href="/recipes/<%= recipe._id %>">
+         <div class="category-img">
+         <img src="/uploads/<%-recipe.image  %>" height="200px" width="170px" style="border-radius: 8px;">
+         <p><%- recipe.name %></p>
+     </div>
+     </a>
+     <% }) %>
+     <% } %>
+ </div>
+ </section>

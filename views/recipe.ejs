@@ -1,0 +1,35 @@
+<h1>Explore Recipes</h1>
+<% if(recipe!==""){ %>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/home">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><%= recipe.name %></li>
+    </ol>
+  </nav>
+<div class="explore-recipes">
+    <div>
+  <img src="/uploads/<%- recipe.image %>" alt="<%= recipe.name %>" style="border-radius: 5px;" height="500px">
+</div>
+  <div style="float: right;">
+  <h2><%= recipe.name %></h2>
+  <p style="font-size: small;"><%= recipe.category %></p>
+  <h3>Cooking Instructions</h3>
+  <p><%= recipe.description %></p>
+<h4>Ingredients</h4>
+<ul>
+    <% recipe.ingredients.forEach(function(ingredient,index){ %>
+    <li><%= ingredient %></li>
+   <hr>
+    </ul>
+    </ul>
+    <% }) %>
+</ul>
+</div>
+</div>
+<% } %>
+<div class="update-delete-in-description">
+<a href="/recipes/update-recipe/<%- recipe.id %>"><button  class="btn btn-primary mt-3">Update Recipe</button></a>
+
+<a href="/recipes/delete/<%- recipe.id %>"><button  class="btn btn-danger mt-3">Delete Recipe</button></a>
+
+</div>

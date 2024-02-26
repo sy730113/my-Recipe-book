@@ -1,0 +1,25 @@
+<h1 class="pb-4">Explore Categories</h1>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/home">Home</a></li>
+        <li class="breadcrumb-item"><a href="/categories">Categories</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Explore Categories</li>
+    </ol>
+</nav>
+
+<%if(categories && categories.length > 0){ %>
+  <div class="categories">
+      <% categories.forEach(function(category, index){ %>
+      <a href="/categories/<%- category._id %>">
+          <div class="category-img">
+              <img src="img/<%- category.image %>" height="100px" width="200px" style="border-radius: 8px;">
+              <p><%- category.name %></p>
+          </div>
+      </a>
+      <% }) %>
+  </div>
+  <% } %>
+
+  
+
+  

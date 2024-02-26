@@ -1,0 +1,140 @@
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/img/hero-image.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Huge selection of delicious recipe ideas</h1>
+        <p class="lead" style="font-size: 1rem;">Indulge in culinary delights beyond compare. Discover flavor. Create memories. Welcome to <span span style="color: blue;">Recipe-Blog</span>.
+            Unleash your inner chef with our mouthwatering recipes. Elevate your cooking game and taste the extraordinary at <span style="color: blue;">Recipe-Blog</span></p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="/explore-latest" class="btn btn-dark btn-lg px-4 me-md-2">Explore Latest</a>
+          <a href="/random-recipe" class="btn btn-outline-secondary btn-lg px-4">Show Random</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <% if(categories!==""){ %>
+        <% categories.forEach(function(category,index){ %>
+    <a href="/categories/<%- category._id %>">
+        <div class="category-img">
+        <img src="img/<%- category.image %>" height="100px" width="200px" style="border-radius: 8px;">
+        <p><%- category.name %></p>
+    </div>
+    </a>
+<% }) %>
+<% } %>
+    <a  href="/categories">
+        <div class="category-img">
+        <img src="/img/view-all.jpg" height="100px" width="200px" style="border-radius: 8px;">
+        <p>View All</p>
+    </div>
+    </a>
+  </div>
+
+  <!--Latest Recipes-->
+<section class="latest-recipes">
+   <div class="d-flex mb-2 align-items-center">
+    <h2>Latest recipes</h2>
+    <a href="/explore-latest " class="ms-auto">View More</a>
+   </div>
+   <div class="chocolate">   
+    <% if(food.latestRecipes!==""){ %>
+        <% food.latestRecipes.forEach(function(recipe,index){ %>
+     <a  href="/recipes/<%= recipe._id %>">
+        <div class="category-img">
+        <img src="/uploads/<%-recipe.image  %>" height="200px" width="170px" style="border-radius: 8px;">
+        <p><%- recipe.name %></p>
+    </div>
+    </a>
+    <% }) %>
+    <% } %>
+</div>
+</section>
+
+
+<!--Latest Recipes-->
+<section class="latest-recipes">
+<div class="d-flex mb-2 align-items-center">
+<h2>Thai recipes</h2>
+<a href="/categories/thai" class="ms-auto">View More</a>
+</div>
+<div class="chocolate">   
+<% if(food.thai!==""){ %>
+    <% food.thai.forEach(function(recipe,index){ %>
+ <a  href="/recipes/<%= recipe._id %>">
+    <div class="category-img">
+    <img src="/uploads/<%-recipe.image  %>" height="200px" width="170px" style="border-radius: 8px;">
+    <p><%- recipe.name %></p>
+</div>
+</a>
+<% }) %>
+<% } %>
+</div>
+</section>
+
+<!--American recipes-start-->
+<section class="latest-recipes">
+    <div class="d-flex mb-2 align-items-center">
+    <h2>American recipes</h2>
+    <a href="/categories/american" class="ms-auto">View More</a>
+    </div>
+    <div class="chocolate">   
+    <% if(food.american!==""){ %>
+        <% food.american.forEach(function(recipe,index){ %>
+     <a  href="/recipes/<%= recipe._id %>">
+        <div class="category-img">
+        <img src="/uploads/<%-recipe.image  %>" height="200px" width="170px" style="border-radius: 8px;">
+        <p><%- recipe.name %></p>
+    </div>
+    </a>
+    <% }) %>
+    <% } %>
+    </div>
+    </section>
+
+<!--American recipes-end-->
+
+
+<!--Chinese recipes-start-->
+<section class="latest-recipes">
+    <div class="d-flex mb-2 align-items-center">
+    <h2>Chinese recipes</h2>
+    <a href="/categories/chinese" class="ms-auto">View More</a>
+    </div>
+    <div class="chocolate">   
+    <% if(food.chinese!==""){ %>
+        <% food.chinese.forEach(function(recipe,index){ %>
+     <a  href="/recipes/<%= recipe._id %>">
+        <div class="category-img" style="width: 170px;">
+        <img src="/uploads/<%-recipe.image  %>" height="200px" width="170px" style="border-radius: 8px;">
+        <p><%- recipe.name %></p>
+    </div>
+    </a>
+    <% }) %>
+    <% } %>
+    </div>
+    </section>
+
+<!--Chinese recipes-end-->
+
+
+   <!--Submit start-->
+<section class="px-4 py-5 my-5 text-center">
+    <img src="/img/publish-recipe.png" alt="publish your recipe for free today">
+    <h1>Publish your recipe for FREE today</h1>
+    <div>
+        <p>Publish your recipe in front of thousands of people for free.</p>
+        <a href="/submit-recipe" class="btn btn-primary btn-dark btn-lg">Submit Recipe</a>
+    </div>
+</section>
+
+   <!--Submit end-->
+
+
+
+
+
+     

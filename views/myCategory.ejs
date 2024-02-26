@@ -1,0 +1,27 @@
+<h1 class="pb-4"><%- categoryById.name %></h1>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/home">Home</a></li>
+        <li class="breadcrumb-item"><a href="/categories">Categories</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><%- categoryById.type %></li>
+    </ol>
+</nav>
+
+<section class="latest-recipes">
+    <div class="d-flex mb-2 align-items-center">
+     <a href="/explore-latest " class="ms-auto">View More</a>
+    </div>
+    <div class="chocolate">   
+     <% if(categoryByType!==""){ %>
+         <% categoryByType.forEach(function(recipe,index){ %>
+      <a  href="/recipes/<%= recipe._id %>">
+         <div class="category-img">
+         <img src="/uploads/<%-recipe.image  %>" height="200px" width="170px" style="border-radius: 8px;">
+         <p><%- recipe.name %></p>
+     </div>
+     </a>
+     <% }) %>
+     <% } %>
+ </div>
+ </section>
+ 

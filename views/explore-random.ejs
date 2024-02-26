@@ -1,0 +1,18 @@
+<h1>Explore Random Recipes</h1>
+
+<section class="latest-recipes">
+    <div class="d-flex mb-2 align-items-center">
+     <!-- <a href="/explore-latest " class="ms-auto">View More</a> -->
+    </div>
+    <div class="chocolate-search">   
+     <% if(randomRecipe!==""){ %>
+      <a  href="/recipes/<%= randomRecipe._id %>">
+         <div class="category-img">
+         <img src="/uploads/<%-randomRecipe.image  %>" height="200px" width="170px" style="border-radius: 8px;">
+         <p><%- randomRecipe.name %></p>
+     </div>
+     </a>
+     
+     <% } %>
+ </div>
+</section>

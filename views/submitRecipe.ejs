@@ -1,0 +1,55 @@
+<div class="submit-container">
+    <h1 class="mt-5">Add Recipe</h1>
+    <p>
+        "Share your favorite recipes with us! Whether it's a cherished family tradition, a culinary experiment gone right, or a secret ingredient masterpiece, we invite you to contribute to our diverse collection of recipes. Let your creativity shine as you share your culinary creations with our community. From comforting classics to innovative twists, your recipes have the power to inspire and delight fellow food enthusiasts."</p>
+    <form action="/submit-recipe" method="POST" enctype="multipart/form-data" id="updateform">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="ingredients">Ingredients:</label>
+            <p style="font-size: 12px;">Example:Ice</p>
+            <div class="ingredient-container">
+                <textarea class="form-control mt-2 ingredient" name="ingredients" id="myIngredients" required></textarea>
+            </div>
+            <button type="button" class="my-2 ingredients">+Ingredient</button>
+        </div>
+        <div class="form-group">
+            <label for="category">Select Category:</label>
+            <select class="form-control" id="category" name="category" required>
+                <option value="Thai">Thai</option>
+                <option value="American">American</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Indian">Indian</option>
+                <option value="Spanish">Spanish</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group mt-3">
+            <p class="image">Image:</p>
+           
+            <input type="file" class="form-control-file" id="image" name="image" accept="public/upload/*"  ></input>
+        </div>
+        <div class="update-delete">
+          
+  
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        
+    </div>
+    </form>
+</div>
+
+
+
+  
+ 
