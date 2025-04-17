@@ -8,6 +8,8 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT;
 
+
+app.use(express.static(path.join(__dirname, 'public')));
 // View engine setup
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); // Correct views path
