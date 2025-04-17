@@ -11,6 +11,9 @@
         "src": "/(.*)",
         "dest": "app.js"
       }
+    ],
+    "includeFiles": [
+      "public/**",
+      "views/**"
     ]
   }
-  
